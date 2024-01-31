@@ -19,7 +19,7 @@ export const NavMenu = ({ className, list }: INavMenuProps) => {
 		} else {
 			setIsShow(isVisible);
 		}
-	}, [isVisible]);
+	}, [isVisible, isShow]);
 
 	return ( isShow ?
 		<nav className={classNames(cls.root, {}, [className])}>

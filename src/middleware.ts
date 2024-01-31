@@ -33,3 +33,7 @@ export const config = {
     // Matcher ignoring `/_next/` and `/api/`
     matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)']
 }
+
+
+// TODO: Навести порядок с мультилэнгом
+//TODO: Добавить страницу ошибки и разбить лэйоут на два компонента постараться добиться мультилэнга на нот ваунд

@@ -1,0 +1,7 @@
+@use 'sass:math';
+
+$full-width: 1920;
+
+@function vw($pixels, $context: $full-width) {
+	@return #{(math.div($pixels, $context)) * 100}vw;
+}

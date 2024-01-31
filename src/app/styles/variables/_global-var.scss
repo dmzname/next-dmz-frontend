@@ -1,0 +1,31 @@
+:root {
+	// Sizes
+	--header-size: #{$header-size}px;
+	--layout-max: 1360px;
+	--layout-min: 320px;
+	--layout-padding: 0 20px;
+
+	// Colors
+	--bg-color: #101010;
+	--brand-color-first: #016466;
+	--brand-color-second: #5e7ab8;
+	--text-color: #cfcfcf;
+
+	// Button colors
+	--btn-color-primary: #101010;
+	--btn-color-outline: #5e7ab8;
+	--btn-color-clear: #5e7ab8;
+	--btn-background-primary: #5e7ab8;
+	--btn-background-outline: transparent;
+	--btn-background-clear: transparent;
+	--btn-border-outline: #5e7ab8;
+
+	// Z-indexes
+	--nav-index: 10;
+	--hamburger-index: 11;
+
+	@media (width > 1920px) {
+		--layout-max: vw(1360);
+		--layout-padding: 0 vw(20);
+	}
+}

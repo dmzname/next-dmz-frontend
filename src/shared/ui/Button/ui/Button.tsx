@@ -1,4 +1,4 @@
-import { classNames, Mods } from '../../../lib/classNames/classNames.ts';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import { ButtonHTMLAttributes, memo, ReactNode } from 'react';
 import cls from './Button.module.scss';
 import { ButtonTheme } from '../types/ButtonTypes';

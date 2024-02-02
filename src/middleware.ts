@@ -24,7 +24,14 @@ export function middleware(request: NextRequest) {
 
 	if (
 		[
-			'/favicon_package/site.webmanifest',
+			'/site.webmanifest',
+			'/favicon.ico',
+			'/apple-touch-icon.png',
+			'/favicon-32x32.png',
+			'/favicon-16x16.png',
+			'/safari-pinned-tab.svg',
+			'/android-chrome-192x192.png"',
+			'/android-chrome-512x512.png',
 			// Your other files in `public`
 		].includes(pathname)
 	)

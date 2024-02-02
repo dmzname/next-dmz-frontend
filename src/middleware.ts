@@ -13,8 +13,7 @@ function getLocale(request: NextRequest): string | undefined {
         const languages = new Negotiator({ headers: negotiatorHeaders }).languages();
 	*/
 
-	// @ts-ignore locales are readonly
-	const locales: string[] = i18n.locales;
+	const locales: string[] = [...i18n.locales];
 
 	return matchLocale(locales, locales, i18n.defaultLocale);
 }
@@ -41,7 +40,6 @@ export function middleware(request: NextRequest) {
 		(locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}/`,
 	);
 
-	// Redirect if there is no locale
 	if (pathnameIsMissingLocale) {
 		const locale = getLocale(request);
 		return NextResponse.redirect(new URL(`/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`, request.url));
@@ -58,4 +56,4 @@ export const config = {
 // TODO: Разобраться с подключением метаданных почему не раотают линки
 // TODO: Доверстать главный экран
 // TODO: Настроить все согласно замечаниям PageSpeed
-// TODO:
+// TODO: Прописать тайтлы и дескрипшены

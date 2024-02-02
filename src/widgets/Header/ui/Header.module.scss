@@ -1,36 +1,36 @@
 $line-width: vw(40);
 
 .root {
-	position: relative;
+  position: relative;
 
-	height: var(--header-size);
-	padding: 20px;
-	display: flex;
-	align-items: flex-end;
-	justify-content: space-between;
+  height: var(--header-size);
+  padding: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 
-	&::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 20px;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20px;
 
-		width: calc(100% - 40px);
-		height: 1px;
+    width: calc(100% - 40px);
+    height: 1px;
 
-		opacity: 0.25;
-		background-color: var(--brand-color-second);
-	}
+    opacity: 0.25;
+    background-color: var(--brand-color-second);
+  }
 
-	@media (width > 1920px) {
-		// height: vw($header-size);
-		padding: vw(20);
+  @media (width > 1920px) {
+    height: vw($header-size);
+    padding: vw(20);
 
-		&::after {
-			left: vw(20);
+    &::after {
+      left: vw(20);
 
-			width: calc(100% - #{$line-width});
-			height: vw(1);
-		}
-	}
+      width: calc(100% - #{$line-width});
+      height: vw(1);
+    }
+  }
 }

@@ -1,4 +1,15 @@
 {
-	"page": "RUS",
-	"navMenu": ["Прайс", "Обо мне", "продукты", "контакты"]
+  "navMenu": [
+    "Прайс",
+    "Обо мне",
+    "продукты",
+    "контакты"
+  ],
+  "metadata": {
+    "main": {
+      "title": "Дмитрий Забелин | Full stack javascript разработчик",
+      "description": "Привет всем, Я Full stack javascript разработчик",
+      "keywords": "javascript, react, node.js, full stack"
+    }
+  }
 }

@@ -25,7 +25,7 @@ export const NavMenu = ({ className, list }: INavMenuProps) => {
 		<nav className={classNames(cls.root, {}, [className])}>
 			<ul
 				className={classNames(cls['nav-links-list'], {
-					[cls.active]: true,
+					[cls.active]: isVisible,
 				})}
 			>
 				{list.map((link, index) => (

@@ -1,3 +1,9 @@
+import Link from 'next/link';
+
 export default function NotFound() {
-	return <div>NOT FOUND</div>;
+	return (
+		<div>
+			<Link href={'/'}>GO BACK</Link>
+		</div>
+	);
 }

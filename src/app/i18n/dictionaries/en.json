@@ -1,4 +1,15 @@
 {
-	"page": "ENG",
-	"navMenu": ["price", "about me", "products", "contacts"]
+  "navMenu": [
+    "price",
+    "about me",
+    "products",
+    "contacts"
+  ],
+  "metadata": {
+    "main": {
+      "title": "Dmitro Zabelin | Full stack javascript developer",
+      "description": "Hi, there! I'm Full stack javascript developer",
+      "keywords": "javascript, react, node.js, full stack"
+    }
+  }
 }

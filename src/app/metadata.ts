@@ -1,9 +1,4 @@
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-	title: 'Dmitro Zabelin',
-	description: 'Javascript full stack developer.',
-	keywords: 'Javascript, Node.js',
+export const metadata = {
 	icons: {
 		icon: '/favicon.ico',
 		other: [

@@ -1,4 +1,15 @@
 {
-	"page": "UKR",
-	"navMenu": ["Прайс", "Про мене", "продукти", "контакти"]
+  "navMenu": [
+    "Прайс",
+    "Про мене",
+    "продукти",
+    "контакти"
+  ],
+  "metadata": {
+    "main": {
+      "title": "Дмитро Забєлін | Full stack javascript розробник",
+      "description": "Привіт усім. Я Full stack javascript розробник",
+      "keywords": "javascript, react, node.js, full stack"
+    }
+  }
 }

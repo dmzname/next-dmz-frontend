@@ -9,6 +9,9 @@ interface IInfoHeroBlock {
 	title: string;
 	descriptionOne: string;
 	descriptionTwo: string;
+	buttonOne: string;
+	buttonTwo: string;
+	contactMe: string;
 }
 
 interface IHeroBlockProps {
@@ -25,12 +28,12 @@ export const HeroBlock = ({ className, info }: IHeroBlockProps) => {
 				<p className={classNames(cls['hero-description'], {}, [cls['hero-description-one']])}>{info?.descriptionOne}</p>
 				<p className={classNames(cls['hero-description'], {}, [cls['hero-description-two']])}>{info?.descriptionTwo}</p>
 				<Button disabled className={classNames(cls['hero-btn'], {}, [cls['hero-btn-one']])}>
-					Проекты
+					{info?.buttonOne}
 				</Button>
 				<Button disabled className={classNames(cls['hero-btn'], {}, [cls['hero-btn-two']])} theme={ButtonTheme.OUTLINE}>
-					Загрузить CV
+					{info?.buttonTwo}
 				</Button>
-				<ContactsMe />
+				<ContactsMe text={info?.contactMe} />
 			</div>
 			<div className={cls['hero-image']}></div>
 			{/*<Decor2 className={cls.decor2} />*/}

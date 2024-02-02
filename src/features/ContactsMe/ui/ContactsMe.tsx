@@ -7,12 +7,13 @@ import Hub from '@/shared/assets/icons/github.svg';
 
 interface IContactsMeProps {
 	className?: string;
+	text?: string;
 }
 
-export const ContactsMe = ({ className }: IContactsMeProps) => {
+export const ContactsMe = ({ className, text }: IContactsMeProps) => {
 	return (
 		<div className={classNames(cls.root, {}, [className])}>
-			<p>свяжитесь со мной</p>
+			<p>{text}</p>
 			<a href="https://t.me/dmzname" target="_blank">
 				<Telegram />
 			</a>

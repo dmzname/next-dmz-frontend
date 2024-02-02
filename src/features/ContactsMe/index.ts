@@ -1,1 +1,1 @@
-export { ContactsMe } from './ui/ContactsMe.tsx';
+export { ContactsMe } from './ui/ContactsMe';

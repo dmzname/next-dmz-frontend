@@ -9,7 +9,14 @@
     "main": {
       "title": "Дмитро Забєлін | Full stack javascript розробник",
       "description": "Привіт усім. Я Full stack javascript розробник",
-      "keywords": "javascript, react, node.js, full stack"
+      "keywords": "javascript, react, node.js, full stack, web, development, express"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Веб-проєкти: full stack розробка на JavaScript з використанням React і Node.js",
+      "descriptionOne": "Моє ім'я Дмитро Забєлін. Я займаюся розробкою на JavaScript. Тут представлені мої проєкти, що відображають мій стиль і підхід до веб-розробки.",
+      "descriptionTwo": "Готовий до цікавих завдань і відкритий для нових проєктів."
     }
   }
 }

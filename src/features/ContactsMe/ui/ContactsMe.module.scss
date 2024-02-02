@@ -1,0 +1,25 @@
+.root {
+  font-size: 18px;
+  letter-spacing: .1em;
+  text-align: center;
+
+  color: var(--brand-color-second);
+
+  order: 7;
+
+  p {
+    margin-bottom: 30px;
+  }
+
+  a, button {
+    padding: 0;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    svg {
+      width: 30px;
+    }
+  }
+}

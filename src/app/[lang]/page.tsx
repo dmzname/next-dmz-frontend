@@ -1,4 +1,5 @@
 import { getDictionary, Locale } from '@/app/i18n';
+import { HeroBlock } from '@/widgets/HeroBlock';
 
 export async function generateMetadata({ params }: { params: { lang: Locale } }) {
 	const { metadata } = await getDictionary(params.lang);
@@ -10,6 +11,11 @@ export async function generateMetadata({ params }: { params: { lang: Locale } })
 }
 
 export default async function Home({ params: { lang } }: { params: { lang: Locale } }) {
-	// const { page } = await getDictionary(lang);
-	return <main></main>;
+	const { home } = await getDictionary(lang);
+	const { hero } = home;
+	return (
+		<main>
+			<HeroBlock info={hero} />
+		</main>
+	);
 }

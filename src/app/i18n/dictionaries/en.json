@@ -9,7 +9,14 @@
     "main": {
       "title": "Dmitro Zabelin | Full stack javascript developer",
       "description": "Hi, there! I'm Full stack javascript developer",
-      "keywords": "javascript, react, node.js, full stack"
+      "keywords": "javascript, react, node.js, full stack, web, development, express"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Web Projects: Full Stack JavaScript Development with React and Node.js",
+      "descriptionOne": "My name is Dmitry Zabelin, and I specialize in JavaScript development. Below, you'll find some of my web development projects that demonstrate my style and approach.",
+      "descriptionTwo": "Prepared for intriguing challenges and available for new projects."
     }
   }
 }

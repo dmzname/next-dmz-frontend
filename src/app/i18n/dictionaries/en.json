@@ -1,9 +1,4 @@
 {
-  "page": "ENG",
-  "navMenu": [
-    "price",
-    "about me",
-    "products",
-    "contacts"
-  ]
+	"page": "ENG",
+	"navMenu": ["price", "about me", "products", "contacts"]
 }

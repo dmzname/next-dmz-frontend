@@ -1,7 +1,14 @@
 {
   "root": true,
-  "extends": "next",
+  "extends": [
+    "next",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
   "rules": {
+    "prettier/prettier": "error",
     "react/display-name": "off"
   }
 }

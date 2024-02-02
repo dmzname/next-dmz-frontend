@@ -21,7 +21,7 @@ export const NavMenu = ({ className, list }: INavMenuProps) => {
 		}
 	}, [isVisible, isShow]);
 
-	return ( isShow ?
+	return isShow ? (
 		<nav className={classNames(cls.root, {}, [className])}>
 			<ul
 				className={classNames(cls['nav-links-list'], {
@@ -34,6 +34,6 @@ export const NavMenu = ({ className, list }: INavMenuProps) => {
 					</li>
 				))}
 			</ul>
-		</nav> : null
-	);
+		</nav>
+	) : null;
 };

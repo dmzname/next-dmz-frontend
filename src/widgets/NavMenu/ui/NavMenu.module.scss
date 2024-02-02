@@ -1,88 +1,88 @@
 .root {
-  position: fixed;
-  inset: 0;
-  z-index: var(--nav-index);
+	position: fixed;
+	inset: 0;
+	z-index: var(--nav-index);
 }
 
 .nav-links-list {
-  width: 100%;
-  height: 100%;
+	width: 100%;
+	height: 100%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
-  background-color: rgb(59 77 116 / 20%);
-  opacity: 0;
+	background-color: rgb(59 77 116 / 20%);
+	opacity: 0;
 
-  transform-origin: center center;
+	transform-origin: center center;
 
-  animation: fade-out .3s ease both;
+	animation: fade-out 0.3s ease both;
 
-  backdrop-filter: blur(.75em);
+	backdrop-filter: blur(0.75em);
 
-  &.active {
-    animation: fade-in .3s ease both;
-  }
+	&.active {
+		animation: fade-in 0.3s ease both;
+	}
 }
 
 .nav-link {
-  font-size: 36px;
-  letter-spacing: .3em;
-  text-decoration: line-through;
-  text-transform: uppercase;
+	font-size: 36px;
+	letter-spacing: 0.3em;
+	text-decoration: line-through;
+	text-transform: uppercase;
 
-  color: #fff;
+	color: #fff;
 
-  opacity: .1;
-  cursor: not-allowed;
+	opacity: 0.1;
+	cursor: not-allowed;
 
-  &:not(:last-child) {
-    margin-bottom: 50px;
-  }
+	&:not(:last-child) {
+		margin-bottom: 50px;
+	}
 
-  @media (width > 1920px) {
-    font-size: vw(36);
+	@media (width > 1920px) {
+		font-size: vw(36);
 
-    &:not(:last-child) {
-      margin-bottom: vw(50);
-    }
-  }
+		&:not(:last-child) {
+			margin-bottom: vw(50);
+		}
+	}
 }
 
 @keyframes fade-in {
-  0% {
-    opacity: 0;
+	0% {
+		opacity: 0;
 
-    transform: scale(0);
-  }
+		transform: scale(0);
+	}
 
-  25% {
-    opacity: 0;
-  }
+	25% {
+		opacity: 0;
+	}
 
-  50% {
-    opacity: 0.5;
-  }
+	50% {
+		opacity: 0.5;
+	}
 
-  100% {
-    opacity: 1;
+	100% {
+		opacity: 1;
 
-    transform: scale(1);
-  }
+		transform: scale(1);
+	}
 }
 
 @keyframes fade-out {
-  0% {
-    opacity: 1;
+	0% {
+		opacity: 1;
 
-    transform: scale(1);
-  }
+		transform: scale(1);
+	}
 
-  100% {
-    opacity: 0;
+	100% {
+		opacity: 0;
 
-    transform: scale(0);
-  }
+		transform: scale(0);
+	}
 }

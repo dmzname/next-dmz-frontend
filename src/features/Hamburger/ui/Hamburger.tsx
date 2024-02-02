@@ -3,7 +3,7 @@ import cls from './Hamburger.module.scss';
 import { useState } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
-import {useNavMenu} from "@/app/providers/NavMenuProvider";
+import { useNavMenu } from '@/app/providers/NavMenuProvider';
 
 interface IHamburgerProps {
 	className?: string;

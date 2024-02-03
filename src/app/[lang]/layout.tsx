@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import '@/app/styles/globals.scss';
 import { Header } from '@/widgets/Header';
 import { NavMenu } from '@/widgets/NavMenu';
@@ -23,6 +24,7 @@ export default async function RootLayout({
 					{children}
 					<NavMenu list={navMenu} />
 				</NavMenuProvider>
+				<Analytics />
 			</body>
 		</html>
 	);

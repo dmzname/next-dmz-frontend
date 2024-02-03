@@ -29,7 +29,7 @@ export function middleware(request: NextRequest) {
 			'/favicons/favicon-32x32.png',
 			'/favicons/favicon-16x16.png',
 			'/favicons/safari-pinned-tab.svg',
-			'/favicons/android-chrome-192x192.png"',
+			'/favicons/android-chrome-192x192.png',
 			'/favicons/android-chrome-512x512.png',
 			// Your other files in `public`
 		].includes(pathname)

@@ -23,14 +23,14 @@ export function middleware(request: NextRequest) {
 
 	if (
 		[
-			'/site.webmanifest',
-			'/favicon.ico',
-			'/apple-touch-icon.png',
-			'/favicon-32x32.png',
-			'/favicon-16x16.png',
-			'/safari-pinned-tab.svg',
-			'/android-chrome-192x192.png"',
-			'/android-chrome-512x512.png',
+			'/favicons/site.webmanifest',
+			'/favicons/favicon.ico',
+			'/favicons/apple-touch-icon.png',
+			'/favicons/favicon-32x32.png',
+			'/favicons/favicon-16x16.png',
+			'/favicons/safari-pinned-tab.svg',
+			'/favicons/android-chrome-192x192.png"',
+			'/favicons/android-chrome-512x512.png',
 			// Your other files in `public`
 		].includes(pathname)
 	)
@@ -51,9 +51,6 @@ export const config = {
 	matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 };
 
-// TODO: Навести порядок с кодом
-// TODO: Интернациализировать мета данные
-// TODO: Разобраться с подключением метаданных почему не раотают линки
 // TODO: Доверстать главный экран
 // TODO: Настроить все согласно замечаниям PageSpeed
 // TODO: Прописать тайтлы и дескрипшены

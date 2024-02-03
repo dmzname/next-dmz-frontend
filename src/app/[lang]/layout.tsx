@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import '@/app/styles/globals.scss';
 import { Header } from '@/widgets/Header';
 import { NavMenu } from '@/widgets/NavMenu';
@@ -25,6 +26,7 @@ export default async function RootLayout({
 					<NavMenu list={navMenu} />
 				</NavMenuProvider>
 				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	);

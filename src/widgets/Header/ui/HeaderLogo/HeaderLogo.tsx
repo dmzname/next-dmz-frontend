@@ -1,6 +1,7 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './HeaderLogo.module.scss';
 import Logo from '@/shared/assets/images/dmz_logo.svg';
+import Link from 'next/link';
 
 interface IHeaderLogoProps {
 	className?: string;
@@ -8,9 +9,9 @@ interface IHeaderLogoProps {
 
 export const HeaderLogo = ({ className }: IHeaderLogoProps) => {
 	return (
-		<a className={classNames(cls.root, {}, [className])}>
+		<Link href={'/'} className={classNames(cls.root, {}, [className])}>
 			<Logo />
 			<span>Dmitro Zabelin</span>
-		</a>
+		</Link>
 	);
 };

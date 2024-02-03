@@ -3,7 +3,6 @@ $header-height: vw($header-size);
 .root {
   padding: 0 15px;
   display: flex;
-  flex-direction: column;
   width: 100%;
   min-height: calc(100vh - var(--header-size));
   max-width: var(--layout-max);
@@ -30,8 +29,7 @@ $header-height: vw($header-size);
     display: none;
 
     svg {
-      width: 850px;
-      max-width: 100%;
+      width: 600px;
       height: auto;
     }
   }
@@ -62,9 +60,10 @@ $header-height: vw($header-size);
 
   &-btn {
     padding: 15px 40px;
-    min-width: 210px;
+    min-width: 175px;
     width: 100%;
     margin: 0 auto 60px;
+    opacity: .075 !important;
 
     &-one {
       order: 3;
@@ -72,6 +71,53 @@ $header-height: vw($header-size);
 
     &-two {
       order: 5;
+    }
+  }
+
+  @media (width >= 1024px) {
+    &-info {
+      padding: 60px 0 30px;
+      width: 50%;
+      display: inline-block;
+    }
+    &-image {
+      display: inline-block;
+      width: 50%;
+
+      svg {
+        position: absolute;
+        left: -35px;
+        top: -50px;
+        z-index: -1;
+      }
+    }
+    &-description {
+
+      text-align: left;
+
+      &-two {
+        margin-bottom: 60px;
+      }
+    }
+    &-btn {
+      width: auto;
+
+      &-one {
+        margin-right: 25px;
+        margin-bottom: 0;
+      }
+
+      &-two {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (width >= 1366px) {
+    &-image {
+      svg {
+        width: 750px;
+      }
     }
   }
 }

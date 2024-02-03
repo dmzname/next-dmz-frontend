@@ -1,11 +1,15 @@
 body {
-	min-width: var(--layout-min);
+  min-width: var(--layout-min);
 
-	font-weight: 400;
-	font-size: 16px;
-	font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
 
-	background-color: var(--bg-color);
+  background-color: var(--bg-color);
 
-	color: var(--text-color);
+  color: var(--text-color);
+}
+
+main {
+  overflow: hidden;
 }

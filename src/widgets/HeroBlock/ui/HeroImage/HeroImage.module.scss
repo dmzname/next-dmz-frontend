@@ -1,0 +1,172 @@
+.root {
+  position: relative;
+
+  display: none;
+
+  svg {
+    width: 600px;
+    height: auto;
+  }
+
+  @media (width >= 1024px) {
+    display: inline-block;
+    width: 50%;
+
+    svg {
+      position: absolute;
+      left: -35px;
+      top: -50px;
+      z-index: -1;
+    }
+  }
+
+  @media (width >= 1366px) {
+    svg {
+      width: 850px;
+      left: -75px;
+    }
+  }
+
+  @media (width >= 1600px) {
+    svg {
+      left: -50px;
+    }
+  }
+}
+
+.background-wall {
+  path {
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+
+    &:nth-child(1) {
+      animation-delay: .15s
+    }
+
+    &:nth-child(2) {
+      animation-delay: .3s
+    }
+
+    &:nth-child(3) {
+      animation-delay: .45s
+    }
+
+    &:nth-child(4) {
+      animation-delay: .60s
+    }
+
+    &:nth-child(5) {
+      animation-delay: .75s
+    }
+
+    &:nth-child(6) {
+      animation-delay: .9s
+    }
+
+    &:nth-child(7) {
+      animation-delay: 1.05s
+    }
+
+    &:nth-child(8) {
+      animation-delay: 1.2s
+    }
+
+    &:nth-child(9) {
+      animation-delay: 1.35s
+    }
+
+    &:nth-child(10) {
+      animation-delay: 1.5s
+    }
+
+    &:nth-child(11) {
+      animation-delay: 1.65s
+    }
+
+    &:nth-child(12) {
+      animation-delay: 1.8s
+    }
+
+    &:nth-child(13) {
+      animation-delay: 1.95s
+    }
+
+    &:nth-child(14),
+    &:nth-child(15),
+    &:nth-child(16),
+    &:nth-child(17),
+    &:nth-child(18),
+    &:nth-child(19),
+    &:nth-child(20),
+    &:nth-child(21) {
+      opacity: 1;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: draw 2s ease-out forwards;
+    }
+  }
+}
+
+.loader {
+  path {
+    &:first-child {
+      stroke-width: 22px;
+      stroke-dasharray: 400;
+      stroke-dashoffset: -200;
+      animation: draw 10s ease forwards infinite;
+    }
+
+    &:nth-child(2) {
+      stroke-width: 2px;
+      stroke-opacity: .7;
+    }
+  }
+
+  .percent {
+    opacity: 0;
+    animation: fadeIn 10s ease forwards infinite;
+  }
+}
+
+.folder-way {
+  opacity: 1;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 2s ease-out forwards infinite;
+}
+
+.flying-folder {
+  animation: bounceOutRight 3s ease-out forwards infinite;
+}
+
+@keyframes fadeIn {
+  0%, 90% {
+    opacity: 0;
+  }
+  95%, 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes bounceOutRight {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(-20px, 0, 0) scaleX(0.9);
+    transform: translate3d(-20px, 0, 0) scaleX(0.9);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0) scaleX(2);
+    transform: translate3d(2000px, 0, 0) scaleX(2);
+  }
+}

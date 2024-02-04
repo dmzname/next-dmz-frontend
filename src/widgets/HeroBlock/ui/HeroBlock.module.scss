@@ -23,17 +23,6 @@ $header-height: vw($header-size);
     margin: 0 auto;
   }
 
-  &-image {
-    position: relative;
-
-    display: none;
-
-    svg {
-      width: 600px;
-      height: auto;
-    }
-  }
-
   &-title {
     position: absolute;
     font-size: 0;
@@ -80,17 +69,6 @@ $header-height: vw($header-size);
       width: 50%;
       display: inline-block;
     }
-    &-image {
-      display: inline-block;
-      width: 50%;
-
-      svg {
-        position: absolute;
-        left: -35px;
-        top: -50px;
-        z-index: -1;
-      }
-    }
     &-description {
 
       text-align: left;
@@ -109,14 +87,6 @@ $header-height: vw($header-size);
 
       &-two {
         margin-bottom: 0;
-      }
-    }
-  }
-
-  @media (width >= 1366px) {
-    &-image {
-      svg {
-        width: 750px;
       }
     }
   }

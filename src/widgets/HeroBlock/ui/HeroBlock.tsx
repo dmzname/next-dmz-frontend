@@ -4,7 +4,7 @@ import cls from './HeroBlock.module.scss';
 import { WelcomeSvg } from './WelcomeSvg/WelcomeSvg';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { ContactsMe } from '@/features/ContactsMe';
-import HeroImage from '@/shared/assets/images/hero-image.svg';
+import { HeroImage } from './HeroImage/HeroImage';
 
 interface IInfoHeroBlock {
 	title: string;
@@ -36,9 +36,7 @@ export const HeroBlock = ({ className, info }: IHeroBlockProps) => {
 				</Button>
 				<ContactsMe text={info?.contactMe} />
 			</div>
-			<div className={cls['hero-image']}>
-				<HeroImage className={cls['hero-svg']} />
-			</div>
+			<HeroImage />
 			{/*<Decor2 className={cls.decor2} />*/}
 		</div>
 	);

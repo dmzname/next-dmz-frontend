@@ -29,5 +29,6 @@ export const metadata = {
 	manifest: '/favicons/site.webmanifest',
 	other: {
 		['msapplication-TileColor']: '#da532c',
+		freelancehunt: 'c617f8c40e20320',
 	},
 };

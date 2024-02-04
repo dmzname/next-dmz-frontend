@@ -111,12 +111,14 @@
 }
 
 .loader {
+  animation: fadeIn .5s ease both;
+
   path {
     &:first-child {
       stroke-width: 22px;
       stroke-dasharray: 400;
-      stroke-dashoffset: -200;
-      animation: draw 10s ease forwards infinite;
+      stroke-dashoffset: -150;
+      animation: draw 7s ease forwards infinite;
     }
 
     &:nth-child(2) {
@@ -127,19 +129,19 @@
 
   .percent {
     opacity: 0;
-    animation: fadeIn 10s ease forwards infinite;
+    animation: fadeIn 7s ease forwards infinite;
   }
 }
 
 .folder-way {
   opacity: 1;
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: draw 2s ease-out forwards infinite;
+  //stroke-dasharray: 1000;
+  //stroke-dashoffset: 1000;
+  // animation: draw 2s ease-out forwards infinite;
 }
 
 .flying-folder {
-  animation: bounceOutRight 3s ease-out forwards infinite;
+  // animation: bounceOutRight 3s ease-out forwards infinite;
 }
 
 @keyframes fadeIn {

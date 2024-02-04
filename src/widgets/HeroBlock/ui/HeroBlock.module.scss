@@ -90,6 +90,12 @@ $header-height: vw($header-size);
       }
     }
   }
+
+  @media (width >= 1366px) {
+    &-description {
+      font-size: 20px;
+    }
+  }
 }
 
 .decor2 {

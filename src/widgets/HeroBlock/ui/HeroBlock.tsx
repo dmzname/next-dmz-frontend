@@ -2,7 +2,7 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './HeroBlock.module.scss';
 import { WelcomeSvg } from './WelcomeSvg/WelcomeSvg';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { Button } from '@/shared/ui/Button';
 import { ContactsMe } from '@/features/ContactsMe';
 import { HeroImage } from './HeroImage/HeroImage';
 
@@ -31,13 +31,16 @@ export const HeroBlock = ({ className, info }: IHeroBlockProps) => {
 				<Button disabled className={classNames(cls['hero-btn'], {}, [cls['hero-btn-one']])}>
 					{info?.buttonOne}
 				</Button>
-				<Button disabled className={classNames(cls['hero-btn'], {}, [cls['hero-btn-two']])} theme={ButtonTheme.OUTLINE}>
+				<a
+					target="_blank"
+					href="/zabelin_dmitro.pdf"
+					className={classNames(cls['hero-btn'], {}, [cls['hero-btn-two']])}
+				>
 					{info?.buttonTwo}
-				</Button>
+				</a>
 				<ContactsMe text={info?.contactMe} />
 			</div>
 			<HeroImage />
-			{/*<Decor2 className={cls.decor2} />*/}
 		</div>
 	);
 };

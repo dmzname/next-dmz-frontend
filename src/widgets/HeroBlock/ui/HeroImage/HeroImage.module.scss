@@ -1,3 +1,5 @@
+$time-for-image-animation: 15s;
+
 .root {
   position: relative;
 
@@ -118,7 +120,7 @@
       stroke-width: 22px;
       stroke-dasharray: 400;
       stroke-dashoffset: -150;
-      animation: draw 7s ease forwards infinite;
+      animation: draw $time-for-image-animation ease-out forwards infinite;
     }
 
     &:nth-child(2) {
@@ -129,46 +131,73 @@
 
   .percent {
     opacity: 0;
-    animation: fadeIn 7s ease forwards infinite;
+    animation: fadeIn $time-for-image-animation ease-out forwards infinite;
   }
 }
 
 .folder-way {
   opacity: 1;
-  //stroke-dasharray: 1000;
-  //stroke-dashoffset: 1000;
-  // animation: draw 2s ease-out forwards infinite;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawWithPause $time-for-image-animation ease-out forwards infinite;
 }
 
 .flying-folder {
-  // animation: bounceOutRight 3s ease-out forwards infinite;
+  animation: bounceOutRight $time-for-image-animation ease-out forwards infinite;
+}
+
+.ok path {
+  animation: strokeColor $time-for-image-animation ease-out forwards infinite;
 }
 
 @keyframes fadeIn {
-  0%, 90% {
+  0%, 85% {
     opacity: 0;
   }
-  95%, 100% {
+  91%, 100% {
     opacity: 1;
+  }
+}
+
+@keyframes strokeColor {
+  0%, 85% {
+    stroke: #263238;
+  }
+  87%, 100% {
+    stroke: #3AB496;
   }
 }
 
 @keyframes draw {
-  to {
+  85%, 100% {
     stroke-dashoffset: 0;
   }
 }
 
+@keyframes drawWithPause {
+  0%, 85% {
+    stroke-dashoffset: 1000;
+  }
+  95% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 1000;
+  }
+}
+
 @keyframes bounceOutRight {
-  20% {
+  0%, 90% {
     opacity: 1;
-    -webkit-transform: translate3d(-20px, 0, 0) scaleX(0.9);
+    transform: translate3d(0, 0, 0) scaleX(1);
+  }
+
+  95% {
     transform: translate3d(-20px, 0, 0) scaleX(0.9);
   }
 
-  to {
+  100% {
     opacity: 0;
-    -webkit-transform: translate3d(2000px, 0, 0) scaleX(2);
     transform: translate3d(2000px, 0, 0) scaleX(2);
   }
 }

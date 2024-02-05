@@ -5,6 +5,7 @@ import { Header } from '@/widgets/Header';
 import { NavMenu } from '@/widgets/NavMenu';
 import { getDictionary, i18n, Locale } from '@/app/i18n';
 import { NavMenuProvider } from '@/app/providers/NavMenuProvider';
+import DecorElement from '@/shared/assets/images/decor1.svg';
 
 export { metadata } from '@/app/metadata';
 
@@ -20,6 +21,7 @@ export default async function RootLayout({
 	return (
 		<html lang={params.lang}>
 			<body>
+				<DecorElement className="decor-element  decor-element-one" />
 				<NavMenuProvider>
 					<Header />
 					{children}

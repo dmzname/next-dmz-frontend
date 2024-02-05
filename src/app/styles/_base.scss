@@ -13,3 +13,23 @@ body {
 main {
   overflow: hidden;
 }
+
+.decor-element {
+  position: absolute;
+  z-index: -1;
+
+  &-one {
+    left: -75px;
+    width: 300px;
+
+    @media (width >= 600px) {
+      width: 350px;
+      left: 0;
+    }
+
+    @media (width >= 1024px) {
+      width: 450px;
+      left: 0;
+    }
+  }
+}

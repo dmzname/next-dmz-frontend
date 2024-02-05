@@ -1,6 +1,7 @@
 $header-height: vw($header-size);
 
 .root {
+  position: relative;
   padding: 0 15px;
   display: flex;
   width: 100%;
@@ -52,14 +53,32 @@ $header-height: vw($header-size);
     min-width: 175px;
     width: 100%;
     margin: 0 auto 60px;
-    opacity: .075 !important;
+    border-radius: 5px;
 
     &-one {
       order: 3;
+      opacity: .075 !important;
     }
 
     &-two {
+      max-width: 300px;
+      display: inline-block;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      word-wrap: break-word;
+      letter-spacing: 0.3em;
+      text-align: center;
       order: 5;
+
+      border: 1px solid var(--btn-border-outline);
+
+      color: var(--btn-color-outline);
+
+      @media (width > 1920px) {
+        border: vw(1) solid var(--btn-border-outline);
+      }
     }
   }
 
@@ -95,11 +114,9 @@ $header-height: vw($header-size);
     &-description {
       font-size: 20px;
     }
-  }
-}
 
-.decor2 {
-  position: absolute;
-  bottom: -350px;
-  right: 0;
+    &-btn {
+      width: 50%;
+    }
+  }
 }

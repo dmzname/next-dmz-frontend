@@ -31,6 +31,7 @@ export function middleware(request: NextRequest) {
 			'/favicons/safari-pinned-tab.svg',
 			'/favicons/android-chrome-192x192.png',
 			'/favicons/android-chrome-512x512.png',
+			'/zabelin_dmitro.pdf',
 			// Your other files in `public`
 		].includes(pathname)
 	)
@@ -54,3 +55,6 @@ export const config = {
 // TODO: Доверстать главный экран
 // TODO: Настроить все согласно замечаниям PageSpeed
 // TODO: Прописать тайтлы и дескрипшены
+// TODO: Добавить разный декор на страницы
+// TODO: Реализовать линк компонент
+// TODO: Реализовать форму обратной связи

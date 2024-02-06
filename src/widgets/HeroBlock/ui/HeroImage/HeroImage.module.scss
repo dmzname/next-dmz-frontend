@@ -34,6 +34,14 @@ $time-for-image-animation: 15s;
       left: -50px;
     }
   }
+
+  @media (width > 1920px) {
+    svg {
+      top: vw(-50);
+      width: vw(850);
+      left: vw(-50);
+    }
+  }
 }
 
 .background-wall {

@@ -30,4 +30,25 @@
     text-align: left;
     font-size: 14px;
   }
+
+  @media (width > 1920px) {
+    bottom: vw(30);
+
+    font-size: vw(14);
+
+    p {
+      margin-bottom: vw(30);
+    }
+
+    a, button {
+
+      &:not(:last-child) {
+        margin-right: vw(30);
+      }
+
+      svg {
+        width: vw(30);
+      }
+    }
+  }
 }

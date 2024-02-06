@@ -52,7 +52,6 @@ export const config = {
 	matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 };
 
-// TODO: Доверстать главный экран
 // TODO: Настроить все согласно замечаниям PageSpeed
 // TODO: Прописать тайтлы и дескрипшены
 // TODO: Добавить разный декор на страницы

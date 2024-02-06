@@ -1,41 +1,47 @@
 .root {
-	max-width: 300px;
-	display: inline-block;
+  max-width: 300px;
+  display: inline-block;
 
-	font-family: inherit;
-	font-weight: 600;
-	font-size: 12px;
-	text-transform: uppercase;
-	word-wrap: break-word;
-	letter-spacing: 0.3em;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  letter-spacing: 0.3em;
 
-	border: none;
-	border-radius: 5px;
+  border: none;
+  border-radius: 5px;
 
-	background-color: transparent;
-	cursor: pointer;
+  background-color: transparent;
+  cursor: pointer;
 
-	&[disabled] {
-		opacity: 0.5;
-		cursor: not-allowed;
-	}
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  @media (width > 1920px) {
+    max-width: vw(300);
+    font-size: vw(12);
+    border-radius: vw(5);
+  }
 }
 
 .primary {
-	color: var(--btn-color-primary);
-	background-color: var(--btn-background-primary);
+  color: var(--btn-color-primary);
+  background-color: var(--btn-background-primary);
 }
 
 .outline {
-	border: 1px solid var(--btn-border-outline);
+  border: 1px solid var(--btn-border-outline);
 
-	color: var(--btn-color-outline);
+  color: var(--btn-color-outline);
 
-	@media (width > 1920px) {
-		border: vw(1) solid var(--btn-border-outline);
-	}
+  @media (width > 1920px) {
+    border: vw(1) solid var(--btn-border-outline);
+  }
 }
 
 .clear {
-	color: var(--btn-color-clear);
+  color: var(--btn-color-clear);
 }

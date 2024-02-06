@@ -10,7 +10,8 @@ $header-height: vw($header-size);
   margin: auto;
 
   @media (width > 1920px) {
-    height: calc(100vh - #{$header-height});
+    padding: 0 vw(15);
+    min-height: calc(100vh - #{$header-height});
   }
 }
 
@@ -76,9 +77,6 @@ $header-height: vw($header-size);
 
       color: var(--btn-color-outline);
 
-      @media (width > 1920px) {
-        border: vw(1) solid var(--btn-border-outline);
-      }
     }
   }
 
@@ -117,6 +115,37 @@ $header-height: vw($header-size);
 
     &-btn {
       width: 50%;
+    }
+  }
+
+  @media (width > 1920px) {
+    &-info {
+      padding: vw(60) 0 vw(30);
+
+      max-width: vw(650);
+    }
+
+    &-description {
+      margin-bottom: vw(40);
+      max-width: vw(700);
+      font-size: vw(20);
+    }
+
+    &-btn {
+      padding: vw(15) vw(40);
+      min-width: vw(175);
+      margin: 0 auto vw(60);
+      border-radius: vw(5);
+
+      &-one {
+        margin-right: vw(25);
+      }
+
+      &-two {
+        max-width: vw(300);
+        font-size: vw(12);
+        border: vw(1) solid var(--btn-border-outline);
+      }
     }
   }
 }

@@ -6,6 +6,8 @@ import { NavMenu } from '@/widgets/NavMenu';
 import { getDictionary, i18n, Locale } from '@/app/i18n';
 import { NavMenuProvider } from '@/app/providers/NavMenuProvider';
 import DecorElement from '@/shared/assets/images/decor1.svg';
+import { CallBackPopUp } from '@/features/CallBackPopUp';
+import { PopUpProvider } from '@/app/providers/PopUpProvider';
 
 export { metadata } from '@/app/metadata';
 
@@ -22,11 +24,14 @@ export default async function RootLayout({
 		<html lang={params.lang}>
 			<body>
 				<DecorElement className="decor-element  decor-element-one" />
-				<NavMenuProvider>
-					<Header />
-					{children}
-					<NavMenu list={navMenu} />
-				</NavMenuProvider>
+				<PopUpProvider>
+					<NavMenuProvider>
+						<Header />
+						{children}
+						<NavMenu list={navMenu} />
+						<CallBackPopUp />
+					</NavMenuProvider>
+				</PopUpProvider>
 				<Analytics />
 				<SpeedInsights />
 			</body>

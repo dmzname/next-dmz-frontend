@@ -11,7 +11,7 @@ export const HeaderLogo = ({ className }: IHeaderLogoProps) => {
 	return (
 		<Link href={'/'} className={classNames(cls.root, {}, [className])}>
 			<Logo />
-			<span>Dmitro Zabelin</span>
+			<span>Dm.Zabelin</span>
 		</Link>
 	);
 };

@@ -10,6 +10,8 @@
   --brand-color-first: #016466;
   --brand-color-second: #5e7ab8;
   --text-color: #cfcfcf;
+  --overlay-color: rgb(59 77 116 / 20%);
+  --overlay-filter: blur(0.75em);
 
   // Button colors
   --btn-color-primary: #101010;
@@ -23,6 +25,7 @@
   // Z-indexes
   --nav-index: 10;
   --hamburger-index: 11;
+  --modal-z-index: 99;
 
   @media (width > 1920px) {
     --layout-max: vw(1360);

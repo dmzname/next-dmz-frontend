@@ -18,6 +18,17 @@ main {
   overflow: hidden;
 }
 
+fieldset {
+  min-width: 0;
+}
+
+.nl {
+  display: none;
+  @media (width >= 540px) {
+    display: block;
+  }
+}
+
 .decor-element {
   position: absolute;
   z-index: -1;

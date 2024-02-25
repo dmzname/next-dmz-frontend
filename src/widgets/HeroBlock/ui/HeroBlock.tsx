@@ -3,7 +3,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './HeroBlock.module.scss';
 import { WelcomeSvg } from './WelcomeSvg/WelcomeSvg';
 import { Button } from '@/shared/ui/Button';
-import { ContactsMe } from '@/features/ContactsMe';
+import { ContactLinks } from '@/features/ContactLinks';
 import { HeroImage } from './HeroImage/HeroImage';
 
 interface IInfoHeroBlock {
@@ -38,7 +38,7 @@ export const HeroBlock = ({ className, info }: IHeroBlockProps) => {
 				>
 					{info?.buttonTwo}
 				</a>
-				<ContactsMe text={info?.contactMe} />
+				<ContactLinks text={info?.contactMe} />
 			</div>
 			<HeroImage />
 		</div>

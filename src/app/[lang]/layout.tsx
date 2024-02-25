@@ -6,8 +6,8 @@ import { NavMenu } from '@/widgets/NavMenu';
 import { getDictionary, i18n, Locale } from '@/app/i18n';
 import { NavMenuProvider } from '@/app/providers/NavMenuProvider';
 import DecorElement from '@/shared/assets/images/decor1.svg';
-import { CallBackPopUp } from '@/features/CallBackPopUp';
 import { PopUpProvider } from '@/app/providers/PopUpProvider';
+import { ContactMePopUp } from '@/features/ContactMePopUp';
 
 export { metadata } from '@/app/metadata';
 
@@ -19,7 +19,7 @@ export default async function RootLayout({
 	children,
 	params,
 }: Readonly<{ children: React.ReactNode; params: { lang: Locale } }>) {
-	const { navMenu } = await getDictionary(params.lang);
+	const translations = await getDictionary(params.lang);
 	return (
 		<html lang={params.lang}>
 			<body>
@@ -28,8 +28,8 @@ export default async function RootLayout({
 					<NavMenuProvider>
 						<Header />
 						{children}
-						<NavMenu list={navMenu} />
-						<CallBackPopUp />
+						<NavMenu translations={translations} />
+						<ContactMePopUp translations={translations} />
 					</NavMenuProvider>
 				</PopUpProvider>
 				<Analytics />

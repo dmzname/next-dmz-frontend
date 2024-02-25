@@ -1,5 +1,5 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
-import cls from './ContactsMe.module.scss';
+import cls from './ContactLinks.module.scss';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
 import Telegram from '@/shared/assets/icons/telegram.svg';
 import Mail from '@/shared/assets/icons/mail.svg';
@@ -11,7 +11,7 @@ interface IContactsMeProps {
 	text?: string;
 }
 
-export const ContactsMe = ({ className, text }: IContactsMeProps) => {
+export const ContactLinks = ({ className, text }: IContactsMeProps) => {
 	const { isShowPopUp } = usePopUp();
 	return (
 		<div className={classNames(cls.root, {}, [className])}>

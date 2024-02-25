@@ -5,6 +5,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Locale } from '@/app/i18n';
+
 interface ILanguageSwitcherProps {
 	className?: string;
 	locales: Locale[];

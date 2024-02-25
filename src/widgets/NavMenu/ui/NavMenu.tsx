@@ -3,13 +3,15 @@ import { useNavMenu } from '@/app/providers/NavMenuProvider';
 import { useEffect, useState } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './NavMenu.module.scss';
+import { IDictionaries } from '@/app/i18n';
 
 interface INavMenuProps {
 	className?: string;
-	list: string[];
+	translations?: IDictionaries;
 }
 
-export const NavMenu = ({ className, list }: INavMenuProps) => {
+export const NavMenu = ({ className, translations }: INavMenuProps) => {
+	const { navMenu } = translations ?? {};
 	const { isVisible } = useNavMenu();
 	const [isShow, setIsShow] = useState(false);
 
@@ -28,7 +30,7 @@ export const NavMenu = ({ className, list }: INavMenuProps) => {
 					[cls.active]: isVisible,
 				})}
 			>
-				{list.map((link, index) => (
+				{navMenu?.map((link, index) => (
 					<li key={index + link} className={cls['nav-link']}>
 						{link}
 					</li>

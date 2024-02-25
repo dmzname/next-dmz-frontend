@@ -21,5 +21,19 @@
       "buttonTwo": "Download CV",
       "contactMe": "contact me"
     }
+  },
+  "contactForm": {
+    "title": "How can I help?",
+    "subtitle": "Do you have a question or are you interested in working with me? <span class=\"nl\"></span>Just fill out the form fields below.",
+    "namePlaceholder": "John Doe",
+    "contactPlaceholder": "john@email.com / (+)1234567890",
+    "messagePlaceholder": "What do you wish to discuss?",
+    "submitButton": "Submit"
+  },
+  "validationErrorMessage": {
+    "contactError": "Invalid contact information.",
+    "requiredError": "Required field.",
+    "shortName": "Your name is short.",
+    "longName": "Your name is long."
   }
 }

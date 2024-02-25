@@ -21,5 +21,19 @@
       "buttonTwo": "Завантажити CV",
       "contactMe": "зв'яжіться зі мною"
     }
+  },
+  "contactForm": {
+    "title": "Як я можу допомогти?",
+    "subtitle": "У вас є питання або ви зацікавлені у співпраці зі мною? <span class=\"nl\"></span>Просто заповніть поля форми нижче.",
+    "namePlaceholder": "Джон Доу",
+    "contactPlaceholder": "john@email.com / (+)1234567890",
+    "messagePlaceholder": "Що ви бажаєте обговорити?",
+    "submitButton": "Надіслати"
+  },
+  "validationErrorMessage": {
+    "contactError": "Невірна контактна інформація.",
+    "requiredError": "Обов'язкове поле.",
+    "shortName": "Ваше ім'я занадто коротке.",
+    "longName": "Ваше ім'я занадто довге."
   }
 }

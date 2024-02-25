@@ -1,16 +1,20 @@
 'use client';
 import { PopUp } from '@/shared/ui/PopUp';
 import { usePopUp } from '@/app/providers/PopUpProvider';
+import { IDictionaries } from '@/app/i18n';
+import { ContactMeForm } from '@/features/ContactMePopUp/ui/ContactMeForm/ContactMeForm';
 
 interface ICallBackPopUpProps {
 	className?: string;
+	translations?: IDictionaries;
 }
 
-export const CallBackPopUp = ({ className }: ICallBackPopUpProps) => {
+export const ContactMePopUp = ({ className, translations }: ICallBackPopUpProps) => {
 	const { isClosePopUp, isVisible } = usePopUp();
+
 	return (
 		<PopUp isOpen={isVisible} onClose={isClosePopUp}>
-			<div>IN PROCESS</div>
+			<ContactMeForm translations={translations} />
 		</PopUp>
 	);
 };

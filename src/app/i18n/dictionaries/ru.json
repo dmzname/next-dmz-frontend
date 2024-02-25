@@ -21,5 +21,19 @@
       "buttonTwo": "Загрузить CV",
       "contactMe": "свяжитесь со мной"
     }
+  },
+  "contactForm": {
+    "title": "Чем я могу помочь?",
+    "subtitle": "У вас есть вопрос или вы заинтересованы в сотрудничестве со мной? <span class=\"nl\"></span>Просто заполните поля формы ниже.",
+    "namePlaceholder": "Джон Доу",
+    "contactPlaceholder": "john@email.com / (+)1234567890",
+    "messagePlaceholder": "Что вы желаете обсудить?",
+    "submitButton": "Отправить"
+  },
+  "validationErrorMessage": {
+    "contactError": "Неверная контактная информация.",
+    "requiredError": "Обязательное поле.",
+    "shortName": "Ваше имя слишком короткое.",
+    "longName": "Ваше имя слишком длинное."
   }
 }

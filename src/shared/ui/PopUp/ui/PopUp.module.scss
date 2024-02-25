@@ -20,14 +20,18 @@
 }
 
 .content {
-  padding: 50px 20px;
-  max-width: 90%;
-  width: 500px;
+  padding: 50px 10px;
+  max-width: 95%;
+  width: 750px;
 
   border-radius: 15px;
 
   background-color: var(--bg-color);
   color: var(--text-color);
+
+  @media (width >= 540px) {
+    padding: 75px 30px;
+  }
 }
 
 .is-open {

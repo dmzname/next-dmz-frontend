@@ -3,9 +3,12 @@
   inset: 0;
   z-index: -1;
 
+  padding-top: 20px;
+  max-height: 100vh;
+
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
   background-color: var(--overlay-color);
   backdrop-filter: var(--overlay-filter);
@@ -17,9 +20,15 @@
   transition-duration: .3s;
 
   pointer-events: none;
+  overflow-y: auto;
+
+  @media (width >= 540px) {
+    padding-top: 50px;
+  }
 }
 
 .content {
+  position: relative;
   padding: 50px 10px;
   max-width: 95%;
   width: 750px;
@@ -31,6 +40,29 @@
 
   @media (width >= 540px) {
     padding: 75px 30px;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  z-index: 100;
+  padding: 0;
+  transition: transform .3s ease;
+  font-size: 0 !important;
+
+  svg {
+    width: 50px;
+    height: 50px;
+
+    fill: var(--brand-color-second);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      transform: rotate(180deg);
+    }
   }
 }
 

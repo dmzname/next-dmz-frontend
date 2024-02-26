@@ -2,11 +2,11 @@
 import cls from './ContactMeForm.module.scss';
 import { useFormik } from 'formik';
 import { IDictionaries } from '@/app/i18n';
-import { fetchMessage, validateSchema } from '../../models';
+import { ContactForm, fetchMessage, validateSchema } from '../../models';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button } from '@/shared/ui/Button';
-import { useState } from 'react';
-import { ContactForm } from '../../models/services/validationForm/validationForm';
+import { useEffect, useState } from 'react';
+import OkIcon from '@/shared/assets/icons/ok.svg';
 
 interface ICallBackFormProps {
 	className?: string;
@@ -14,13 +14,19 @@ interface ICallBackFormProps {
 }
 
 export const ContactMeForm = ({ className, translations }: ICallBackFormProps) => {
+	let timeoutID: ReturnType<typeof setTimeout>;
 	const [status, setStatus] = useState('');
 	const { contactForm, validationErrorMessage } = translations ?? {};
 
 	const handleSubmitResult = async (values: ContactForm) => {
 		const response = await fetchMessage(values);
 		response === 'error' ? setStatus('error') : setStatus('success');
+		timeoutID = setTimeout(() => setStatus(''), 2500);
 	};
+
+	useEffect(() => {
+		return clearTimeout(timeoutID);
+	}, []); //eslint-disable-line react-hooks/exhaustive-deps
 
 	const formik = useFormik({
 		initialValues: {
@@ -74,7 +80,20 @@ export const ContactMeForm = ({ className, translations }: ICallBackFormProps) =
 				<Button type="submit" className={cls['form-submit-btn']}>
 					{contactForm?.submitButton}
 				</Button>
-				<div className={cls.result}>{status === 'error' ? 'ERROR' : status === 'success' ? 'SUCCESS' : ''} </div>
+				<div className={classNames(cls.result, { [cls.isShow]: Boolean(status) })}>
+					{status === 'error' ? (
+						<>
+							<p dangerouslySetInnerHTML={{ __html: contactForm?.errorMsg || '' }} />
+						</>
+					) : status === 'success' ? (
+						<>
+							<OkIcon className={cls['ok-icon']} />
+							<p dangerouslySetInnerHTML={{ __html: contactForm?.successMsg || '' }} />
+						</>
+					) : (
+						''
+					)}
+				</div>
 			</fieldset>
 		</form>
 	);

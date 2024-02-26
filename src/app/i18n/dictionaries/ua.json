@@ -28,12 +28,15 @@
     "namePlaceholder": "Джон Доу",
     "contactPlaceholder": "john@email.com / (+)1234567890",
     "messagePlaceholder": "Що ви бажаєте обговорити?",
-    "submitButton": "Надіслати"
+    "submitButton": "Надіслати",
+    "successMsg": "Ваше повідомлення успішно надіслано. <span class=\"nl\"></span>Зв'яжуся з вами в найкоротші терміни. <span class=\"nl\"></span>Дякую за звернення!",
+    "errorMsg": "Виникла помилка під час надсилання вашого повідомлення. <span class=\"nl\"></span>Будь ласка, спробуйте ще раз пізніше або зв'яжіться з нами безпосередньо. <span class=\"nl\"></span>Дякуємо за розуміння."
   },
   "validationErrorMessage": {
     "contactError": "Невірна контактна інформація.",
     "requiredError": "Обов'язкове поле.",
     "shortName": "Ваше ім'я занадто коротке.",
-    "longName": "Ваше ім'я занадто довге."
+    "longName": "Ваше ім'я занадто довге.",
+    "invalidName": "Будь ласка, введіть коректне ім'я. \uD83D\uDE0A"
   }
 }

@@ -28,12 +28,15 @@
     "namePlaceholder": "John Doe",
     "contactPlaceholder": "john@email.com / (+)1234567890",
     "messagePlaceholder": "What do you wish to discuss?",
-    "submitButton": "Submit"
+    "submitButton": "Submit",
+    "successMsg": "Your message has been successfully sent. <span class=\"nl\"></span>I will contact you as soon as possible. <span class=\"nl\"></span>Thank you for reaching out!",
+    "errorMsg": "An error occurred while sending your message. <span class=\"nl\"></span>Please try again later or contact us directly. <span class=\"nl\"></span>Thank you for your understanding."
   },
   "validationErrorMessage": {
     "contactError": "Invalid contact information.",
     "requiredError": "Required field.",
     "shortName": "Your name is short.",
-    "longName": "Your name is long."
+    "longName": "Your name is long.",
+    "invalidName": "Please enter a valid name. \uD83D\uDE0A"
   }
 }

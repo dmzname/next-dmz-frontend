@@ -33,7 +33,7 @@ export const HeroBlock = ({ className, info }: IHeroBlockProps) => {
 				</Button>
 				<a
 					target="_blank"
-					href="/zabelin_dmitro.pdf"
+					href="/zabelin_dmitry.pdf"
 					className={classNames(cls['hero-btn'], {}, [cls['hero-btn-two']])}
 				>
 					{info?.buttonTwo}

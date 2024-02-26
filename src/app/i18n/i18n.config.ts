@@ -31,11 +31,14 @@ export interface IDictionaries {
 		contactPlaceholder: string;
 		messagePlaceholder: string;
 		submitButton: string;
+		successMsg: string;
+		errorMsg: string;
 	};
 	validationErrorMessage: {
 		contactError: string;
 		requiredError: string;
 		shortName: string;
 		longName: string;
+		invalidName: string;
 	};
 }

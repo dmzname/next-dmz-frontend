@@ -1,6 +1,8 @@
 import React, { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './PopUp.module.scss';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
+import CloseBtn from '@/shared/assets/icons/close.svg';
 
 const ANIMATION_DELAY = 300;
 
@@ -65,6 +67,9 @@ export const PopUp = (props: IPopUpProps) => {
 	return (
 		<div onClick={onCloseHandler} className={classNames(cls.root, mods, [className, cls.overlay, 'modal'])}>
 			<div className={cls.content} onClick={(e: React.MouseEvent) => e.stopPropagation()}>
+				<Button theme={ButtonTheme.CLEAR} className={cls['close-btn']} onClick={onCloseHandler}>
+					<CloseBtn />
+				</Button>
 				{children}
 			</div>
 		</div>

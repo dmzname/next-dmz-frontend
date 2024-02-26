@@ -31,7 +31,7 @@ export function middleware(request: NextRequest) {
 			'/favicons/safari-pinned-tab.svg',
 			'/favicons/android-chrome-192x192.png',
 			'/favicons/android-chrome-512x512.png',
-			'/zabelin_dmitro.pdf',
+			'/zabelin_dmitry.pdf',
 			// Your other files in `public`
 		].includes(pathname)
 	)

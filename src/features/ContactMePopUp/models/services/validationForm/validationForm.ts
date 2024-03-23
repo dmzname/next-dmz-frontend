@@ -11,7 +11,7 @@ interface IValidationErrorMessage {
 export const validateSchema = (errorsMsg: IValidationErrorMessage | undefined) =>
 	object({
 		username: string()
-			.matches(/^[a-zA-Zа-яА-ЯҐґЄєІіЇї]+$/, { message: errorsMsg?.invalidName })
+			.matches(/^[a-zA-Zа-яА-ЯҐґЄєІіЇї]+(\s[a-zA-Zа-яА-ЯҐґЄєІіЇї]+)?$/, { message: errorsMsg?.invalidName })
 			.min(2, errorsMsg?.shortName)
 			.max(15, errorsMsg?.longName)
 			.required(errorsMsg?.requiredError),

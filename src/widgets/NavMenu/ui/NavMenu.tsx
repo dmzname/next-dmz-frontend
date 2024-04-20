@@ -1,41 +1,25 @@
 'use client';
-import { useNavMenu } from '@/app/providers/NavMenuProvider';
-import { useEffect, useState } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import cls from './NavMenu.module.scss';
-import { IDictionaries } from '@/app/i18n';
+import { IDictionaries, Locale } from '@/app/i18n';
+import Link from 'next/link';
 
 interface INavMenuProps {
 	className?: string;
 	translations?: IDictionaries;
+	lang?: Locale;
 }
 
-export const NavMenu = ({ className, translations }: INavMenuProps) => {
+export const NavMenu = ({ className, translations, lang }: INavMenuProps) => {
 	const { navMenu } = translations ?? {};
-	const { isVisible } = useNavMenu();
-	const [isShow, setIsShow] = useState(false);
-
-	useEffect(() => {
-		if (!isVisible && isShow) {
-			setTimeout(() => setIsShow(isVisible), 300);
-		} else {
-			setIsShow(isVisible);
-		}
-	}, [isVisible, isShow]);
-
-	return isShow ? (
-		<nav className={classNames(cls.root, {}, [className])}>
-			<ul
-				className={classNames(cls['nav-links-list'], {
-					[cls.active]: isVisible,
-				})}
-			>
-				{navMenu?.map((link, index) => (
-					<li key={index + link} className={cls['nav-link']}>
-						{link}
+	return (
+		<nav className={classNames('', {}, [className])}>
+			<ul>
+				{navMenu?.map(({ href, value }, index) => (
+					<li key={index + value}>
+						<Link href={`/${lang}/${href}`}>{value}</Link>
 					</li>
 				))}
 			</ul>
 		</nav>
-	) : null;
+	);
 };

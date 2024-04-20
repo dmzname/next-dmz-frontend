@@ -2,12 +2,19 @@ $header-height: vw($header-size);
 
 .root {
   position: relative;
-  padding: 0 15px;
-  display: flex;
+  padding: 0 15px 30px;
   width: 100%;
   min-height: calc(100vh - var(--header-size));
-  max-width: var(--layout-max);
-  margin: auto;
+
+  &-layout {
+    max-width: var(--layout-max);
+    display: flex;
+    margin: auto;
+  }
+
+  @media (width >= 1024px) {
+    min-height: auto;
+  }
 
   @media (width > 1920px) {
     padding: 0 vw(15);
@@ -17,7 +24,7 @@ $header-height: vw($header-size);
 
 .hero {
   &-info {
-    padding: 40px 0 30px;
+    padding: 50px 0;
     display: flex;
     flex-direction: column;
 
@@ -32,7 +39,7 @@ $header-height: vw($header-size);
   }
 
   &-description {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     max-width: 700px;
 
     font-size: 16px;
@@ -47,53 +54,65 @@ $header-height: vw($header-size);
     &-two {
       order: 4;
     }
+
+    &-three {
+      margin-bottom: 0;
+      order: 7;
+    }
   }
 
   &-btn {
-    padding: 15px 40px;
+    margin: 0 auto 50px;
+    padding: 15px 20px;
+
     min-width: 175px;
-    width: 100%;
-    margin: 0 auto 60px;
+    max-width: 100%;
+
+    display: inline-block;
+
+    font-size: 12px;
+    font-family: inherit;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    text-align: center;
+    word-wrap: break-word;
+    letter-spacing: 0.3em;
+
     border-radius: 5px;
+    border: 1px solid var(--btn-border-outline);
 
     &-one {
       order: 3;
-      opacity: .075 !important;
+      color: var(--btn-color-primary);
+      background-color: var(--btn-background-primary);
     }
 
     &-two {
-      max-width: 300px;
-      display: inline-block;
-      font-family: inherit;
-      font-weight: 600;
-      font-size: 12px;
-      text-transform: uppercase;
-      word-wrap: break-word;
-      letter-spacing: 0.3em;
-      text-align: center;
       order: 5;
-
-      border: 1px solid var(--btn-border-outline);
-
       color: var(--btn-color-outline);
-
+      background-color: transparent;
     }
   }
 
   @media (width >= 1024px) {
     &-info {
-      padding: 60px 0 30px;
+      padding: 70px 0 30px;
       width: 50%;
       display: inline-block;
 
       margin: 0 0 0 auto;
     }
     &-description {
-
+      margin-bottom: 30px;
       text-align: left;
 
       &-two {
-        margin-bottom: 60px;
+        max-width: 550px;
+      }
+
+      &-three {
+        margin-bottom: 50px;
       }
     }
     &-btn {
@@ -116,21 +135,42 @@ $header-height: vw($header-size);
     }
 
     &-btn {
-      width: 50%;
+      &-one {
+        min-width: 350px;
+      }
+    }
+  }
+
+  @media (width >= 1600px) {
+    &-info {
+      padding: 120px 0 30px;
+    }
+
+    &-description {
+      &-three {
+        margin-bottom: 80px;
+      }
     }
   }
 
   @media (width > 1920px) {
     &-info {
-      padding: vw(60) 0 vw(30);
-
+      padding: vw(120) 0 vw(30);
       max-width: vw(650);
     }
 
     &-description {
-      margin-bottom: vw(40);
-      max-width: vw(700);
+      margin-bottom: vw(30);
       font-size: vw(20);
+      max-width: vw(700);
+
+      &-two {
+        max-width: vw(500);
+      }
+
+      &-three {
+        margin-bottom: vw(80);
+      }
     }
 
     &-btn {
@@ -141,6 +181,7 @@ $header-height: vw($header-size);
 
       &-one {
         margin-right: vw(25);
+        min-width: vw(350);
       }
 
       &-two {
@@ -149,5 +190,25 @@ $header-height: vw($header-size);
         border: vw(1) solid var(--btn-border-outline);
       }
     }
+  }
+}
+
+.contacts-me {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  @media (width >= 1024px) {
+    position: absolute;
+
+    right: 20px;
+    top: 30%;
+
+    width: auto;
+    flex-direction: column;
+  }
+
+  @media (width > 1920px) {
+    right: vw(20)
   }
 }

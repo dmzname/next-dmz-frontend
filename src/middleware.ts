@@ -31,7 +31,6 @@ export function middleware(request: NextRequest) {
 			'/favicons/safari-pinned-tab.svg',
 			'/favicons/android-chrome-192x192.png',
 			'/favicons/android-chrome-512x512.png',
-			'/zabelin_dmitry.pdf',
 			// Your other files in `public`
 		].includes(pathname)
 	)
@@ -51,9 +50,3 @@ export const config = {
 	// Matcher ignoring `/_next/` and `/api/`
 	matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 };
-
-// TODO: Реализовать SEO
-// TODO: Добавить разный декор на страницы
-// TODO: Реализовать линк компонент
-// TODO: Реализовать форму обратной связи
-// TODO: Настроить все согласно замечаниям PageSpeed

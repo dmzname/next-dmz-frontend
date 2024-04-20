@@ -30,8 +30,11 @@
     margin-right: 30px;
   }
 
+  @media (width >= 1024px) {
+    margin-right: 0;
+  }
+
   @media (width > 1920px) {
-    margin-right: vw(30);
 
     &::before,
     &::after {
@@ -55,6 +58,7 @@
   display: inline-block;
 
   font-size: 14px;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 

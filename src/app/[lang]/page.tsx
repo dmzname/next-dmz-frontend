@@ -15,7 +15,7 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
 	const { hero } = home;
 	return (
 		<main>
-			<HeroBlock info={hero} />
+			<HeroBlock lang={lang} info={hero} />
 		</main>
 	);
 }

@@ -34,3 +34,39 @@ $line-width: vw(40);
     }
   }
 }
+
+.header-nav {
+  display: none;
+
+  ul {
+    display: flex;
+
+    li {
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--brand-color-first);
+
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
+  }
+
+  @media (width >= 1024px) {
+    display: block;
+  }
+
+  @media (width > 1920px) {
+    ul {
+      li {
+        font-size: vw(12);
+
+        &:not(:last-child) {
+          margin-right: vw(50);
+        }
+      }
+    }
+  }
+}

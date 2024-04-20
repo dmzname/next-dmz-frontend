@@ -1,9 +1,21 @@
 {
   "navMenu": [
-    "Прайс",
-    "Про мене",
-    "продукти",
-    "контакти"
+    {
+      "href": "portfolio",
+      "value": "портфоліо"
+    },
+    {
+      "href": "about",
+      "value": "Про мене"
+    },
+    {
+      "href": "price",
+      "value": "Прайс"
+    },
+    {
+      "href": "contacts",
+      "value": "контакти"
+    }
   ],
   "metadata": {
     "main": {
@@ -15,11 +27,11 @@
   "home": {
     "hero": {
       "title": "Веб-проєкти: full stack розробка на JavaScript з використанням React і Node.js",
-      "descriptionOne": "Моє ім'я Дмитро Забєлін. Я займаюся розробкою на JavaScript. Тут представлені мої проєкти, що відображають мій стиль і підхід до веб-розробки.",
-      "descriptionTwo": "Готовий до цікавих завдань і відкритий для нових проєктів.",
-      "buttonOne": "Проекти",
-      "buttonTwo": "Завантажити CV",
-      "contactMe": "зв'яжіться зі мною"
+      "descriptionOne": "Моє ім'я Дмитро. Я  <span class=\"dmz-prof\">Full stack JavaScript</span> розробник. ",
+      "descriptionTwo": "Мої навички допоможуть створити для вас продуктивні \nі сучасні веб-проєкти.",
+      "descriptionThree": "Відкритий для співпраці та нових проєктів.",
+      "buttonOne": "перейти в портфоліо",
+      "buttonTwo": "Зв'язатися зі мною"
     }
   },
   "contactForm": {

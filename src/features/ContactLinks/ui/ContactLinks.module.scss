@@ -1,18 +1,8 @@
 .root {
-  font-size: 18px;
-  letter-spacing: .1em;
-  text-align: center;
-
-  color: var(--brand-color-second);
-
-  order: 7;
-
-  p {
-    margin-bottom: 30px;
-  }
-
   a, button {
     padding: 0;
+    width: 30px;
+    height: 30px;
 
     &:not(:last-child) {
       margin-right: 30px;
@@ -24,26 +14,21 @@
   }
 
   @media (width >= 1024px) {
-    position: absolute;
-    bottom: 30px;
-
-    text-align: left;
-    font-size: 14px;
+    a, button {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
   }
 
   @media (width > 1920px) {
-    bottom: vw(30);
-
-    font-size: vw(14);
-
-    p {
-      margin-bottom: vw(30);
-    }
-
     a, button {
+      width: vw(30);
+      height: vw(30);
 
       &:not(:last-child) {
-        margin-right: vw(30);
+        margin-bottom: vw(30);
       }
 
       svg {

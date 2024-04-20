@@ -6,7 +6,10 @@ export const i18n = {
 export type Locale = (typeof i18n)['locales'][number];
 
 export interface IDictionaries {
-	navMenu: string[];
+	navMenu: Array<{
+		href: string;
+		value: string;
+	}>;
 	metadata: {
 		main: {
 			title: string;
@@ -21,7 +24,6 @@ export interface IDictionaries {
 			descriptionTwo: string;
 			buttonOne: string;
 			buttonTwo: string;
-			contactMe: string;
 		};
 	};
 	contactForm: {

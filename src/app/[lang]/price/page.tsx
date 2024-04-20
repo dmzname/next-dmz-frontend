@@ -1,7 +1,7 @@
 import { Locale } from '@/app/i18n';
 import Link from 'next/link';
 
-export default async function Portfolio({ params: { lang } }: { params: { lang: Locale } }) {
+export default async function About({ params: { lang } }: { params: { lang: Locale } }) {
 	// const { page } = await getDictionary(lang);
 	return <main style={
 		{
@@ -15,7 +15,7 @@ export default async function Portfolio({ params: { lang } }: { params: { lang: 
 		<p style={{
 			// @ts-ignore
 			'margin-bottom': '50px',
-		}}>PORTFOLIO PAGE SOON</p>
+		}}>PRICE PAGE SOON</p>
 		<Link href={`/${lang}/`}>GO BACK</Link>
 	</main>;
 }

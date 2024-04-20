@@ -1,13 +1,25 @@
 {
   "navMenu": [
-    "price",
-    "about me",
-    "products",
-    "contacts"
+    {
+      "href": "portfolio",
+      "value": "portfolio"
+    },
+    {
+      "href": "about",
+      "value": "about me"
+    },
+    {
+      "href": "price",
+      "value": "price"
+    },
+    {
+      "href": "contacts",
+      "value": "contacts"
+    }
   ],
   "metadata": {
     "main": {
-      "title": "Dmitry Zabelin | Full stack javascript developer",
+      "title": "Full stack javascript developer",
       "description": "Hi, there! I'm Full stack javascript developer",
       "keywords": "javascript, react, node.js, full stack, web, development, express"
     }
@@ -15,11 +27,11 @@
   "home": {
     "hero": {
       "title": "Web Projects: Full Stack JavaScript Development with React and Node.js",
-      "descriptionOne": "My name is Dmitry Zabelin, and I specialize in JavaScript development. Below, you'll find some of my web development projects that demonstrate my style and approach.",
-      "descriptionTwo": "Prepared for intriguing challenges and available for new projects.",
-      "buttonOne": "Projects",
-      "buttonTwo": "Download CV",
-      "contactMe": "contact me"
+      "descriptionOne": "My name is Dmitry. I'm <span class=\"dmz-prof\">Full stack JavaScript</span> developer. ",
+      "descriptionTwo": "My skills can assist in creating productive and modern web projects.",
+      "descriptionThree": "Open for collaboration and new projects.",
+      "buttonOne": "go to portfolio",
+      "buttonTwo": "Contact me"
     }
   },
   "contactForm": {

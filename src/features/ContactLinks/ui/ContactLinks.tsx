@@ -8,14 +8,12 @@ import { usePopUp } from '@/app/providers/PopUpProvider';
 
 interface IContactsMeProps {
 	className?: string;
-	text?: string;
 }
 
-export const ContactLinks = ({ className, text }: IContactsMeProps) => {
+export const ContactLinks = ({ className }: IContactsMeProps) => {
 	const { isShowPopUp } = usePopUp();
 	return (
 		<div className={classNames(cls.root, {}, [className])}>
-			<p>{text}</p>
 			<a href="https://t.me/dmzname" target="_blank">
 				<Telegram />
 			</a>

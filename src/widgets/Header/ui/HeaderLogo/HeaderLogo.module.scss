@@ -3,14 +3,16 @@
 
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
 
   span {
     display: none;
-    margin-bottom: -1px;
+    margin-bottom: 1px;
 
     letter-spacing: 0.25em;
     text-transform: uppercase;
     font-size: 14px;
+    font-weight: 500;
 
     color: var(--brand-color-first);
   }
@@ -37,8 +39,7 @@
     fill: var(--brand-color-first);
   }
 
-  @media (width >= 600px) {
-    margin-right: auto;
+  @media (width >= 1024px) {
 
     svg {
       margin-right: 20px;
@@ -51,7 +52,7 @@
 
   @media (width > 1920px) {
     span {
-      margin-bottom: vw(-1);
+      margin-bottom: vw(1);
       font-size: vw(14);
     }
 

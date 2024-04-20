@@ -53,24 +53,7 @@
 		}
 	}
 
-	@media (width > 1920px) {
-		width: vw(30);
-		height: vw(20);
-
-		span {
-			height: vw(2);
-		}
-
-		&.active {
-			span {
-				&:nth-child(1) {
-					top: vw(9);
-				}
-
-				&:nth-child(3) {
-					bottom: vw(9);
-				}
-			}
-		}
+	@media (width >= 1024px) {
+		display: none !important;
 	}
 }

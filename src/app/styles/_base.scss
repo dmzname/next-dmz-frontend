@@ -16,6 +16,7 @@ body {
 
 main {
   overflow: hidden;
+  min-height: calc(100vh - var(--header-size));
 }
 
 fieldset {
@@ -27,6 +28,11 @@ fieldset {
   @media (width >= 540px) {
     display: block;
   }
+}
+
+.dmz-prof {
+  font-weight: 700;
+  color: var(--brand-color-second);
 }
 
 .decor-element {

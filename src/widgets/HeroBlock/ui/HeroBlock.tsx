@@ -5,7 +5,7 @@ import { WelcomeSvg } from './WelcomeSvg/WelcomeSvg';
 import { Button } from '@/shared/ui/Button';
 import { ContactLinks } from '@/features/ContactLinks';
 import { HeroImage } from './HeroImage/HeroImage';
-import Link from 'next/link';
+// import Link from 'next/link';
 import { Locale } from '@/app/i18n';
 import { usePopUp } from '@/app/providers/PopUpProvider';
 
@@ -39,9 +39,9 @@ export const HeroBlock = ({ className, info, lang }: IHeroBlockProps) => {
 						className={classNames(cls['hero-description'], {}, [cls['hero-description-two']])}>{info?.descriptionTwo}</p>
 					<p
 						className={classNames(cls['hero-description'], {}, [cls['hero-description-three']])}>{info?.descriptionThree}</p>
-					<Link href={`/${lang}/portfolio`} className={classNames(cls['hero-btn'], {}, [cls['hero-btn-one']])}>
+					{/* <Link href={`/${lang}/portfolio`} className={classNames(cls['hero-btn'], {}, [cls['hero-btn-one']])}>
 						{info?.buttonOne}
-					</Link>
+					</Link> */}
 					<Button className={classNames(cls['hero-btn'], {}, [cls['hero-btn-two']])} onClick={isShowPopUp}>
 						{info?.buttonTwo}
 					</Button>
